@@ -31,11 +31,13 @@
     <h2>The <span class="pink">short version</span></h2>
     <ul>
       <li>No account, no sign-in, no name or email collected by the game.</li>
-      <li>Your game progress stays on your iPhone. We don't receive it.</li>
+      <li>Your save file stays on your iPhone. From version 1.0.2 the App sends <b>anonymous gameplay statistics</b>
+        (for example, which game you reached and whether you won) so we can balance the game. Never your name.</li>
       <li>Ads are <b>non-personalized</b>, and the game <b>never asks to track you</b> (no App Tracking Transparency
         prompt, no advertising identifier).</li>
-      <li>We use two service providers: <b>Google AdMob</b> for ads and <b>RevenueCat</b> for purchases and reward
-        verification. They receive limited technical data, described below.</li>
+      <li>We use three service providers: <b>Google AdMob</b> for ads, <b>Google Analytics for Firebase</b> for
+        gameplay statistics and <b>RevenueCat</b> for purchases and reward verification. They receive limited
+        technical data, described below.</li>
       <li>We don't sell your personal information.</li>
     </ul>
     <div class="toc">
@@ -81,6 +83,24 @@
       ads load, and you can change your choice any time in the App: <b>Settings → Privacy options</b>. Learn more:
       <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from apps that use its services</a>
       and <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+
+    <h3>Google Analytics for Firebase (gameplay statistics)</h3>
+    <p>From version 1.0.2 the App uses Google Analytics for Firebase to understand how the game is played, so we can
+      fix difficulty spikes, improve features and see which parts players enjoy. It may process:</p>
+    <ul>
+      <li>a random app-instance ID created by the Firebase SDK (reset when you delete the App; not your Apple ID, name or
+        email, and not the advertising identifier, which the App never uses);</li>
+      <li>gameplay events: games started and finished (game number, score, result, time played), training, Locker,
+        Shop and other menu actions, reward ads watched and in-app purchases made (product and price, no payment
+        details);</li>
+      <li>basic device and app information (model, OS version, app version, language) and an approximate location
+        (country or region) that Google derives from the connection's IP address.</li>
+    </ul>
+    <p>Analytics data is not used for advertising or to track you across apps. In the EU/EEA, UK and Switzerland,
+      the consent message shown at launch also covers analytics: if you decline storing data on your device, the App
+      sends only anonymous, ID-free signals. You can change your choice any time in <b>Settings &rsaquo; Privacy
+      options</b>. Learn more: <a href="https://firebase.google.com/support/privacy">Privacy and Security in
+      Firebase</a> and <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
 
     <h3>RevenueCat (purchases and reward verification)</h3>
     <p>RevenueCat processes in-app purchases and verifies reward ads so items can be delivered and restored. It may
@@ -147,6 +167,8 @@
       <li><b>Purchase and reward records</b> (RevenueCat): for as long as needed to restore your purchases and meet
         legal and accounting requirements.</li>
       <li><b>Advertising data</b> (Google): according to Google's retention policies.</li>
+      <li><b>Gameplay statistics</b> (Google Analytics for Firebase): event-level data for up to 14 months; after
+        that only aggregated reports remain.</li>
       <li><b>Support requests:</b> as long as needed to resolve them. Public GitHub issues stay until deleted.</li>
     </ul>
   </section>
